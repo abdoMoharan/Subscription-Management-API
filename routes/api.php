@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\Auth\AuthController;
+use App\Http\Controllers\Api\Payment\PaymentController;
 use App\Http\Controllers\Api\Plan\PlanController;
 use App\Http\Controllers\Api\Subscription\SubscriptionController;
 use Illuminate\Support\Facades\Route;
@@ -30,5 +31,10 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/restore/{id}', 'restore')->name('restore');
         Route::get('/force-delete/{id}', 'forceDelete')->name('force-delete');
         Route::post('/cancel/{id}', 'cancel')->name('cancel');
+    });
+
+    Route::prefix('payments')->name('payments.')->controller(PaymentController::class)->group(function () {
+        Route::post('/success', 'success')->name('success');
+        Route::post('/fail', 'fail')->name('fail');
     });
 });
