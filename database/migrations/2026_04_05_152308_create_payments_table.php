@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('subscription_id')
+                ->constrained()
+                ->cascadeOnDelete();
+            $table->decimal('amount', 10, 2);
+            $table->enum('currency', ['AED', 'USD', 'EGP']);
+            $table->enum('status', ['success', 'failed']);
+            $table->string('failure_reason')->nullable();
             $table->timestamps();
         });
     }
