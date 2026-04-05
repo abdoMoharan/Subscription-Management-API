@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Auth;
+namespace App\Http\Requests\Subscription;
 
 use App\Http\Requests\Base\ApiRequest;
 
-class AuthRequest extends ApiRequest
+class SubscriptionRequest extends ApiRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,11 +22,12 @@ class AuthRequest extends ApiRequest
     public function rules(): array
     {
         return [
-            'email' => 'required|email|exists:users,email',
-            'password' => 'required|string|min:6',
+            'plan_id'       => 'required|exists:plans,id',
+            'currency'      => 'required|in:AED,USD,EGP',
+            'billing_cycle' => 'required|in:monthly,yearly',
+
         ];
     }
-
     public function getData()
     {
         $data = $this->validated();

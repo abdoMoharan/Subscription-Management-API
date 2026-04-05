@@ -26,6 +26,7 @@ return new class extends Migration
             $table->timestamp('current_period_ends_at')->nullable();
             $table->timestamp('grace_period_ends_at')->nullable();
             $table->timestamp('canceled_at')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

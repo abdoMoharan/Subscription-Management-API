@@ -24,7 +24,7 @@ class AuthController extends Controller
             return ApiResponse::apiResponse(JsonResponse::HTTP_UNAUTHORIZED, 'Invalid password');
         }
         $token = $user->createToken(self::TOKEN_NAME)->plainTextToken;
-        $data          = $user->only(['name',  'phone']);
+        $data          = $user->only(['name',  'email']);
         $data['token'] = $token;
         return ApiResponse::apiResponse(JsonResponse::HTTP_OK, 'User logged in successfully', $data);
     }

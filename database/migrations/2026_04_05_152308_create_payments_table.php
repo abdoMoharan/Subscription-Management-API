@@ -20,6 +20,7 @@ return new class extends Migration
             $table->enum('currency', ['AED', 'USD', 'EGP']);
             $table->enum('status', ['success', 'failed']);
             $table->string('failure_reason')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
+use App\Models\PlanPrice;
+use App\Models\Subscription;
 use App\trait\CustomFunctionSoftDeleted;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Builder;
 
 class Plan extends Model
 {
@@ -20,7 +22,25 @@ class Plan extends Model
     //relation
     public function prices()
     {
-        return $this->hasMany(PlanPrice::class);
+        return $this->hasMany(PlanPrice::class, 'plan_id');
+    }
+
+    public function subscriptions()
+    {
+        return $this->hasMany(Subscription::class, 'plan_id');
+    }
+
+    public function getPrice(string $currency, string $billingCycle): ?PlanPrice
+    {
+        return $this->prices()
+            ->where('currency', $currency)
+            ->where('billing_cycle', $billingCycle)
+            ->first();
+    }
+
+    public function hasTrial(): bool
+    {
+        return $this->trial_days > 0;
     }
 
     public function scopeActive($query, $arg)
