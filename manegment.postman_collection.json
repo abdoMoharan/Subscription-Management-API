@@ -1,0 +1,1021 @@
+{
+  "info": {
+    "_postman_id": "517e7d2c-b4b4-4430-a359-fda98ef5a810",
+    "name": "manegment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32002388",
+    "_collection_link": "https://go.postman.co/collection/32002388-517e7d2c-b4b4-4430-a359-fda98ef5a810?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Plan",
+      "item": [
+        {
+          "name": "list",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"login_type\":\"phone\",\r\n    // \"phone\":\"01010101010\",\r\n    \"login_type\":\"email\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"ip_address\":\"12222\",\r\n    \"password\":\"password\"\r\n}"
+            },
+            "url": {
+              "raw": "{{url}}/plans",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "plans"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list deleted",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"login_type\":\"phone\",\r\n    // \"phone\":\"01010101010\",\r\n    \"login_type\":\"email\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"ip_address\":\"12222\",\r\n    \"password\":\"password\"\r\n}"
+            },
+            "url": {
+              "raw": "{{url}}/plans/deleted",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "plans",
+                "deleted"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "show",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"login_type\":\"phone\",\r\n    // \"phone\":\"01010101010\",\r\n    \"login_type\":\"email\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"ip_address\":\"12222\",\r\n    \"password\":\"password\"\r\n}"
+            },
+            "url": {
+              "raw": "{{url}}/plans/show/1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "plans",
+                "show",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"login_type\":\"phone\",\r\n    // \"phone\":\"01010101010\",\r\n    \"login_type\":\"email\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"ip_address\":\"12222\",\r\n    \"password\":\"password\"\r\n}"
+            },
+            "url": {
+              "raw": "{{url}}/plans/delete/1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "plans",
+                "delete",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "force-delete",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"login_type\":\"phone\",\r\n    // \"phone\":\"01010101010\",\r\n    \"login_type\":\"email\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"ip_address\":\"12222\",\r\n    \"password\":\"password\"\r\n}"
+            },
+            "url": {
+              "raw": "{{url}}/plans/force-delete/1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "plans",
+                "force-delete",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"الخطة الاحترافية - Pro Plan\",\r\n    \"description\": \"وصف كامل لمميزات الخطة وكيفية الاستفادة منها\",\r\n    \"trial_days\": 14,\r\n    \"status\": 1,\r\n    \"plan_prices\": [\r\n        {\r\n            \"billing_cycle\": \"monthly\",\r\n            \"currency\": \"USD\",\r\n            \"price\": 29.99\r\n        },\r\n        {\r\n            \"billing_cycle\": \"yearly\",\r\n            \"currency\": \"USD\",\r\n            \"price\": 299.00\r\n        },\r\n        {\r\n            \"billing_cycle\": \"monthly\",\r\n            \"currency\": \"EGP\",\r\n            \"price\": 1500.00\r\n        }\r\n    ]\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{url}}/plans",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "plans"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "restore",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"الخطة الاحترافية - Pro Plan\",\r\n    \"description\": \"وصف كامل لمميزات الخطة وكيفية الاستفادة منها\",\r\n    \"trial_days\": 14,\r\n    \"status\": 1,\r\n    \"plan_prices\": [\r\n        {\r\n            \"billing_cycle\": \"monthly\",\r\n            \"currency\": \"USD\",\r\n            \"price\": 29.99\r\n        },\r\n        {\r\n            \"billing_cycle\": \"yearly\",\r\n            \"currency\": \"USD\",\r\n            \"price\": 299.00\r\n        },\r\n        {\r\n            \"billing_cycle\": \"monthly\",\r\n            \"currency\": \"EGP\",\r\n            \"price\": 1500.00\r\n        }\r\n    ]\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{url}}/plans/restore/1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "plans",
+                "restore",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"تحديث: الخطة الذهبية\",\r\n    \"description\": \"وصف جديد بعد التعديل\",\r\n    \"trial_days\": 30,\r\n    \"status\": 1,\r\n    \"plan_prices\": [\r\n        {\r\n            \"billing_cycle\": \"yearly\",\r\n            \"currency\": \"AED\",\r\n            \"price\": 5000.00\r\n        },\r\n        {\r\n            \"billing_cycle\": \"monthly\",\r\n            \"currency\": \"USD\",\r\n            \"price\": 150.00\r\n        }\r\n    ]\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{url}}/plans/update/1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "plans",
+                "update",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "subscriptions",
+      "item": [
+        {
+          "name": "list",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"login_type\":\"phone\",\r\n    // \"phone\":\"01010101010\",\r\n    \"login_type\":\"email\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"ip_address\":\"12222\",\r\n    \"password\":\"password\"\r\n}"
+            },
+            "url": {
+              "raw": "{{url}}/subscriptions",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "subscriptions"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list deleted",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"login_type\":\"phone\",\r\n    // \"phone\":\"01010101010\",\r\n    \"login_type\":\"email\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"ip_address\":\"12222\",\r\n    \"password\":\"password\"\r\n}"
+            },
+            "url": {
+              "raw": "{{url}}/subscriptions/deleted",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "subscriptions",
+                "deleted"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "show",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"login_type\":\"phone\",\r\n    // \"phone\":\"01010101010\",\r\n    \"login_type\":\"email\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"ip_address\":\"12222\",\r\n    \"password\":\"password\"\r\n}"
+            },
+            "url": {
+              "raw": "{{url}}/subscriptions/show/1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "subscriptions",
+                "show",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"login_type\":\"phone\",\r\n    // \"phone\":\"01010101010\",\r\n    \"login_type\":\"email\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"ip_address\":\"12222\",\r\n    \"password\":\"password\"\r\n}"
+            },
+            "url": {
+              "raw": "{{url}}/subscriptions/delete/1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "subscriptions",
+                "delete",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "force-delete",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"login_type\":\"phone\",\r\n    // \"phone\":\"01010101010\",\r\n    \"login_type\":\"email\",\r\n    \"email\":\"admin@admin.com\",\r\n    \"ip_address\":\"12222\",\r\n    \"password\":\"password\"\r\n}"
+            },
+            "url": {
+              "raw": "{{url}}/plans/force-delete/1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "plans",
+                "force-delete",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"plan_id\": \"1\",\r\n    \"billing_cycle\": \"monthly\",\r\n    \"currency\": \"USD\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{url}}/subscriptions",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "subscriptions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "restore",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"الخطة الاحترافية - Pro Plan\",\r\n    \"description\": \"وصف كامل لمميزات الخطة وكيفية الاستفادة منها\",\r\n    \"trial_days\": 14,\r\n    \"status\": 1,\r\n    \"plan_prices\": [\r\n        {\r\n            \"billing_cycle\": \"monthly\",\r\n            \"currency\": \"USD\",\r\n            \"price\": 29.99\r\n        },\r\n        {\r\n            \"billing_cycle\": \"yearly\",\r\n            \"currency\": \"USD\",\r\n            \"price\": 299.00\r\n        },\r\n        {\r\n            \"billing_cycle\": \"monthly\",\r\n            \"currency\": \"EGP\",\r\n            \"price\": 1500.00\r\n        }\r\n    ]\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{url}}/subscriptions/restore/1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "subscriptions",
+                "restore",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"تحديث: الخطة الذهبية\",\r\n    \"description\": \"وصف جديد بعد التعديل\",\r\n    \"trial_days\": 30,\r\n    \"status\": 1,\r\n    \"plan_prices\": [\r\n        {\r\n            \"billing_cycle\": \"yearly\",\r\n            \"currency\": \"AED\",\r\n            \"price\": 5000.00\r\n        },\r\n        {\r\n            \"billing_cycle\": \"monthly\",\r\n            \"currency\": \"USD\",\r\n            \"price\": 150.00\r\n        }\r\n    ]\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{url}}/subscriptions/cancel/1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "subscriptions",
+                "cancel",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "payments",
+      "item": [
+        {
+          "name": "success",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"subscription_id\": \"2\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{url}}/payments/success",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "payments",
+                "success"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "fail",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "User-Agent",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"subscription_id\": \"1\",\r\n    \"reason\":\"\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "{{url}}/payments/fail",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "payments",
+                "fail"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"user@example.com\",\r\n    \"password\": \"password\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/login",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
